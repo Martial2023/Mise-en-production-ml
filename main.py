@@ -35,6 +35,12 @@ def get_answer(prompt: str) -> str:
         return response.choices[0].message.content
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro calling Graoq API: {str(e)}")
+ 
+@app.get("/")
+def get_started():
+    return {
+        "info": "Cette API FastAPI permet d'exécuter un modèle LLM (Llama 4 Scout 17B) via Groq et de poser des questions en français. Utilisez la route POST /grok avec un prompt pour obtenir une réponse générée."
+    }
     
 @app.post("/grok")
 async def agent(input: PromptInput):
