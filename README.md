@@ -88,7 +88,7 @@ print(reponse["result"])
 - Render (hébergement)
 
 ## Auteur
-- [Votre Nom ou Pseudo]
+- AVADRA Martial
 
 ## Licence
 MIT
